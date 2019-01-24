@@ -18,7 +18,8 @@ public class App
         String inputLine = null;
         while ((inputLine = reader.readLine()) != null) {
             System.out.println(inputLine);
-            System.out.println("getProtocol->" + google.getProtocol());
+        }
+        System.out.println("getProtocol->" + google.getProtocol());
             System.out.println("getAuthority->" + google.getAuthority());
             System.out.println("getHost->" + google.getHost());
             System.out.println("getPort->" + google.getPort());
@@ -26,7 +27,6 @@ public class App
             System.out.println("getQuery->" + google.getQuery());
             System.out.println("getFile->" + google.getFile());
             System.out.println("getRef->" + google.getRef());
-        }
     }catch (IOException x) {
         System.err.println(x);
     }
