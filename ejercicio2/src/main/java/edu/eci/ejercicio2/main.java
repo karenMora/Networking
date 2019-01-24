@@ -17,17 +17,17 @@ import java.util.Scanner;
 public class main {
     public static void main( String[] args) throws Exception{
         Scanner scan = new Scanner(System.in);
-        String text = scan.next();
+        String text = scan.nextLine();
         URL url=new URL(text);
         
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()))) {
             String inputLine = null;
-            BufferedWriter p = null;
-            p= new BufferedWriter(new FileWriter("resultado.html"));
+            BufferedWriter  p= new BufferedWriter(new FileWriter("resultado.html"));
             while ((inputLine = reader.readLine()) != null) {
                 p.write(inputLine);
-                p.close();
             }
+            reader.close();
+            p.close();
         }catch (IOException x) {
             System.err.println(x);
         }
